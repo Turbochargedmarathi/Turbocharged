@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        /* background: rgb(255, 255, 255); */
+    }
+    
+    .head {
+        display: flex;
+        background-image: url(a.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 200px;
+        border: 2px solid;
+    }
+    
+    .head img {
+        border-radius: 140px;
+    }
+    
+    .logo img {
+        text-align: right;
+        margin-left: 20px;
+        width: 200px;
+        height: 200px;
+        margin-top: 0%;
+    }
+    
+    #nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+        position: sticky;
+        top: 0%;
+        cursor: pointer;
+    }
+    
+    #nav::before {
+        content: none;
+        background-color: black;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+    }
+    
+    #nav ul {
+        display: flex;
+        background-color: black;
+    }
+    
+    #nav ul li {
+        list-style: none;
+        font-size: 1.1rem;
+        background-color: black;
+    }
+    
+    #nav ul li a {
+        display: block;
+        padding: 3px 15px;
+        border-radius: 20px;
+        text-decoration: none;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    a:link,
+    a:visited {
+        display: block;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        text-transform: uppercase;
+        padding: 5px;
+    }
+    
+    a:hover,
+    a:active {
+        background-color: rgba(0, 134, 34, 0.781);
+    }
+    /*css search nav  */
+    
+    .search-form {
+        float: left;
+        text-align: left;
+        margin-left: 362px;
+        border-radius: 5px;
+        background-color: black;
+    }
+    
+    input[type=text] {
+        padding: 5px;
+        font-family: sans-serif;
+        border: solid 1px;
+        background-color: rgb(88, 203, 207);
+        font-size: 15px;
+    }
+    
+    .search-form button {
+        text-align: left;
+        margin-left: 0%;
+        background: #2196F3;
+        /* background-color: rgb(236, 159, 16); */
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        position: reletive;
+        padding: 5px;
+        font-family: sans-serif;
+        border: solid 1px;
+        font-size: 16px;
+    }
+    
+    .search-form button :hover {
+        background: #0b7dda;
+    }
+    
+    .firstsection {
+        height: 100vh;
+        background-color: rgb(0, 0, 0, 0.7);
+        background-image: url('bg1.jpg');
+        background-size: cover;
+        background-blend-mode: darken;
+    }
+    
+    .boxmain {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        max-width: 50%;
+        margin: auto;
+        height: 80%;
+    }
+    
+    .firsthalf {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .textbig {
+        font-size: 34px;
+    }
+    
+    .textsmale {
+        font-size: 18px;
+    }
+    
+    .btn {
+        padding: 4px 25px;
+        margin: 5px 12px;
+        border: 2px solid white;
+        border-radius: 8px;
+        background: none;
+        color: white;
+        cursor: pointer;
+    }
+    
+    .secondhalf {
+        width: 30%;
+    }
+    
+    .secondhalf img {
+        width: 200px;
+        height: 200px;
+        display: block;
+        margin: auto;
+        border: 4px solid white;
+        border-radius: 150px;
+    }
+    
+    #footer {
+        background-color: black;
+        height: 50px;
+    }
+    
+    .text-footer {
+        text-align: center;
+        font-family: 'Unbuntu'sans-serif;
+        display: flex;
+        justify-content: center;
+        padding: 15px 0;
+        color: white;
+    }
+    /* #hinfo {
+        background-color: rgb(22, 20, 20);
+    } */
+    
+    .icontainer {
+        padding: 0%;
+        margin: 0%;
+        padding-bottom: 20px;
+    }
+    
+    .isecction {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin: 55px 0;
+        border: 2px solid black;
+        border-radius: 20px;
+        box-shadow: 3px 12px 10px 5px #706b6b;
+    }
+    
+    .isecction1 {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        margin: 55px 0;
+        border-radius: 20px;
+        border: 2px solid black;
+        box-shadow: 3px 12px 10px 5px #706b6b;
+    }
+    
+    .ih1 {
+        width: 60%;
+        padding: 30px;
+        font-size: 19px;
+        font-family: 'PT Serif', serif;
+    }
+    
+    .iimg img {
+        width: 200px;
+    }
+    
+    #updates {
+        width: 100%;
+        height: 900px;
+        font-family: Arial;
+        margin: 0;
+        box-sizing: border-box;
+        padding-top: 25px;
+        /* border: 5px solid black; */
+    }
+    
+    .updates {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .updates img {
+        vertical-align: middle;
+    }
+    /* Position the image container (needed to position the left and right arrows) */
+    
+    .ucontainer {
+        /* position: relative; */
+        height: 800px;
+        padding: 0px 130px;
+    }
+    /* Hide the images by default */
+    
+    .mySlides {
+        display: none;
+    }
+    /* Add a pointer when hovering over the thumbnail images */
+    
+    .cursor {
+        cursor: pointer;
+    }
+    /* Next & previous buttons */
+    
+    .prev,
+    .next {
+        cursor: pointer;
+        position: absolute;
+        top: 112%;
+        width: 12%;
+        padding: 16px;
+        margin-top: -50px;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        -webkit-user-select: none;
+    }
+    /* Position the "next button" to the right */
+    
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+    /* On hover, add a black background color with a little bit see-through */
+    /* Number text (1/3 etc) */
+    
+    .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+    }
+    
+    .mySlides img {
+        width: 100%;
+        height: 500px;
+    }
+    /* Container for image text */
+    
+    .caption-container {
+        text-align: center;
+        background-color: #222;
+        padding: 2px 16px;
+        color: white;
+    }
+    
+    .urow {
+        height: 200px;
+    }
+    
+    .urow:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    /* Six columns side by side */
+    
+    .ucolumn {
+        float: left;
+        width: 16.66%;
+    }
+    /* Add a transparency effect for thumnbail images */
+    
+    .demo {
+        /* opacity: 0.6; */
+        height: 120px;
+    }
+    
+    #photos {
+        box-sizing: border-box;
+        text-align: center;
+        background-color: #eae4e4;
+        height: 175.7vh;
+        padding-top: 60px;
+    }
+    /* The grid: Four equal columns that floats next to each other */
+    
+    .column {
+        float: left;
+        width: 25%;
+        display: grid;
+        grid-template-columns: 300px auto 100px;
+        height: 200px;
+        padding: 20px 0px;
+        /* box-shadow: 5px 5px 10px 1px black; */
+    }
+    
+    .column1 {
+        float: left;
+        width: 25%;
+        display: grid;
+        grid-template-columns: 300px auto 100px;
+        height: 200px;
+        padding: 20px 0px;
+        /* box-shadow: 5px 5px 10px 1px black; */
+    }
+    
+    .column2 {
+        float: left;
+        width: 25%;
+        display: grid;
+        grid-template-columns: 300px auto 100px;
+        height: 200px;
+        padding: 20px 0px;
+        /* box-shadow: 5px 5px 10px 1px black; */
+    }
+    /* Style the images inside the grid */
+    
+    .column img {
+        /* opacity: 0.8; */
+        cursor: pointer;
+        height: 200px;
+        width: 25%;
+        padding: 5px;
+    }
+    
+    .column1 img {
+        /* opacity: 0.8; */
+        cursor: pointer;
+        height: 200px;
+        width: 25%;
+        padding: 5px;
+    }
+    
+    .column2 img {
+        /* opacity: 0.8; */
+        cursor: pointer;
+        height: 200px;
+        width: 25%;
+        padding: 5px;
+    }
+    /* .column img:hover {
+        opacity: 1;
+    }
+    
+    .column1 img:hover {
+        opacity: 1;
+    }
+    
+    .column2 img:hover {
+        opacity: 1;
+    } */
+    /* Clear floats after the columns */
+    
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #eae4e4
+    }
+    
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    /* The expanding image container */
+    
+    .container {
+        position: relative;
+        margin: auto;
+        display: none;
+        height: 310px;
+        width: 500px;
+        background-color: #eae4e4;
+    }
+    /* Expanding image text */
+    /* #imgtext {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        color: white;
+        font-size: 20px;
+    } */
+    /* Closable button inside the expanded image */
+    
+    .closebtn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        color: rgb(223, 18, 18);
+        font-size: 35px;
+        cursor: pointer;
+    }
+    /* video gallary */
+    
+    #videos {
+        padding-top: 60px;
+        border: 2px solid red;
+    }
+    
+    #videos h1 {
+        display: grid;
+        justify-content: center;
+    }
+    
+    .vcontainer {
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    
+    .vcontainer h1 {
+        display: block;
+    }
+    
+    .box {
+        display: block;
+        width: 28%;
+        height: 250px;
+        border-radius: 40px;
+        margin: 1rem;
+        padding: 25px 14px;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Zen Kurenaido', sans-serif;
+        box-shadow: 5px 5px 10px 1px black;
+    }
+    
+    .boximg {
+        margin: auto;
+        display: block;
+        padding-left: 136px;
+    }
+    
+    .box1 {
+        width: 26%;
+        height: 150px;
+        background-image: url(v1.png);
+        background-size: cover;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .box2 {
+        background: url(v2.png);
+        width: 26%;
+        height: 150px;
+        background-size: cover;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .box3 {
+        background: url(v3.png);
+        width: 26%;
+        height: 150px;
+        background-size: cover;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .box4 {
+        background: url(v4.png);
+        width: 26%;
+        height: 150px;
+        background-size: cover;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .box5 {
+        background: url(v5.png);
+        width: 26%;
+        height: 150px;
+        background-size: cover;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .box6 {
+        background: url(v6.png);
+        width: 26%;
+        height: 150px;
+        background-size: cover;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .box7 {
+        background: url(v7.png);
+        width: 26%;
+        height: 150px;
+        background-size: cover;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .box8 {
+        background: url(v8.png);
+        width: 26%;
+        height: 150px;
+        background-size: cover;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .box9 {
+        background: url(v9.png);
+        width: 26%;
+        height: 150px;
+        background-size: cover;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .box10 {
+        background: url(v10.png);
+        width: 26%;
+        height: 150px;
+        background-size: cover;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .box11 {
+        background: url(v11.png);
+        width: 26%;
+        height: 150px;
+        background-size: cover;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .box12 {
+        background: url(v12.png);
+        width: 26%;
+        height: 150px;
+        background-size: cover;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .vimg {
+        width: 350px;
+        height: 250px;
+    }
+    
+    .vbtn1 {
+        width: 25%;
+        cursor: pointer;
+        border-radius: 50px;
+    }
+    
+    .vbtn2 {
+        width: 25%;
+        cursor: pointer;
+        border-radius: 50px;
+    }
+    
+    .vbtn3 {
+        width: 25%;
+        cursor: pointer;
+        border-radius: 50px;
+    }
+    
+    .vbtn4 {
+        width: 25%;
+        cursor: pointer;
+        border-radius: 50px;
+    }
+    
+    .vbtn5 {
+        width: 25%;
+        cursor: pointer;
+        border-radius: 50px;
+    }
+    
+    .vbtn6 {
+        width: 25%;
+        cursor: pointer;
+        border-radius: 50px;
+    }
+    
+    .vbtn7 {
+        width: 25%;
+        cursor: pointer;
+        border-radius: 50px;
+    }
+    
+    .vbtn8 {
+        width: 25%;
+        cursor: pointer;
+        border-radius: 50px;
+    }
+    
+    .vbtn9 {
+        width: 25%;
+        cursor: pointer;
+        border-radius: 50px;
+    }
+    
+    .vbtn10 {
+        width: 25%;
+        cursor: pointer;
+        border-radius: 50px;
+    }
+    
+    .vbtn11 {
+        width: 25%;
+        cursor: pointer;
+        border-radius: 50px;
+    }
+    
+    .vbtn12 {
+        width: 25%;
+        cursor: pointer;
+        border-radius: 50px;
+    }
+    
+    .Acontainer {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: repeat (auto-fit, minmax(400px, 1fr));
+        justify-content: center;
+    }
+    
+    .Acontainer h1 {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        padding-top: 25px;
+    }
+    
+    .abox {
+        display: flex;
+        width: 1000px;
+        border: 1px solid black;
+        background-color: rgb(224, 218, 209);
+        height: 500px;
+    }
+    
+    .abox img {
+        width: 14%;
+        border-radius: 150px;
+        padding: 1px;
+        height: 150px;
+    }
+    
+    .ainfo {
+        justify-content: left;
+        display: grid;
+        grid-column: auto;
+        width: 76%;
+        /* padding-left: 10px; */
+    }
+    
+    .aimgh1 {
+        font-size: 23px;
+    }
+    
+    .aimgp {
+        padding-left: 2%;
+    }
+    
+    .aimgp2 {
+        padding-left: 2%;
+    }
+    
+    .ainfo p {
+        padding-left: 2%;
+    }
+    
+    #contactus {
+        width: 100%;
+        background-color: rgb(204, 196, 185);
+        display: grid;
+        height: 700px;
+    }
+    
+    #contactus h1 {
+        padding-top: 20px;
+        margin: auto;
+    }
+    
+    .ccontainer {
+        width: 55%;
+        margin: auto;
+    }
+    
+    .cform input[type=text],
+    select,
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+    
+    input[type=submit] {
+        background-color: #04AA6D;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-left: 43%;
+    }
+    
+    input[type=submit]:hover {
+        background-color: #45a049;
+    }
+</style>
+
+<body>
+    <div class="head ">
+        <img src="logo.jpg" alt="">
+
+    </div>
+    <div id="nav">
+        <ul>
+            <li class="item"><a href="#">home</a></li>
+            <li class="item"><a href="#updates">updates</a></li>
+            <li class="item"><a href="#photos">Photos</a></li>
+            <li class="item"><a href="#videos">videos</a></li>
+            <li class="item"><a href="#about us">about us</a></li>
+            <li class="item"><a href="#contactus">contact us</a></li>
+            <!-- search in nav -->
+            <form class="search-form">
+                <input type="text" placeholder="Search">
+                <button>search</button>
+            </form>
+        </ul>
+
+    </div>
+    <section class="firstsection">
+        <div class="boxmain">
+            <div class="firsthalf">
+                <p class="textbig">TURBOCHARGED MARATHI</p>
+                <p class="textsmale">Get Regularly Updates in Automobile Industries</p>
+                <div class="button">
+                    <button class="btn">SUBCRIBE
+                        <a href="https://www.youtube.com/channel/UCMrekvS9ov7hMps5P62_-Ow/featured">
+                        </a>
+                    </button>
+
+                    <button class="btn">WATCH VIDEOS
+                        <a href="https://www.youtube.com/channel/UCMrekvS9ov7hMps5P62_-Ow/videos">
+                        </a>
+                    </button>
+
+                    <button class="btn">FACEBOOK
+        <a href="https://www.facebook.com/Shubhambhosale3333/">
+        </a>
+                    </button>
+
+                    <button class="btn">INSTRAGRAM
+                    <a href="https://www.instagram.com/turbochargedmarathi/?utm_medium=copy_link">
+                    </a>
+                                     </button>
+
+                </div>
+            </div>
+            <div class="secondhalf">
+                <img src="logo.jpg" alt="logo">
+            </div>
+        </div>
+    </section>
+    <hr>
+    <div id="hinfo" class="icontainer">
+        <section class="isecction">
+
+            <div class="ih1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, quis! Animi expedita voluptatibus, eligendi nihil quis reiciendis ipsam voluptatum iusto!</div>
+            <div class="iimg">
+                <img src="logo.jpg" alt="">
+            </div>
+
+        </section>
+        </section>
+        <section class="isecction1">
+            <div class="ih1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, quis! Animi expedita voluptatibus, eligendi nihil quis reiciendis ipsam voluptatum iusto!</div>
+            <div class="iimg">
+                <img src="logo.jpg" alt="">
+            </div>
+        </section>
+        <section class="isecction">
+            <div class="ih1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, quis! Animi expedita voluptatibus, eligendi nihil quis reiciendis ipsam voluptatum iusto!</div>
+            <div class="iimg">
+                <img src="logo.jpg" alt="">
+            </div>
+        </section>
+    </div>
+    <footer id="footer">
+        <p class="text-footer">
+            Copyright & copy; 2027 - www.TurbochargedMarathi.com - All rights reserved
+        </p>
+    </footer>
+    <div id="updates">
+        <h1 class="updates">Todays Updates</h1>
+        <div class="ucontainer">
+            <div class="mySlides">
+                <div class="numbertext">1 / 6</div>
+                <img src="1.jpg" style="width:100% ">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">2 / 6</div>
+                <img src="2.jpg" style="width:100%  ">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">3 / 6</div>
+                <img src="3.jpg" style="width:100% ">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">4 / 6</div>
+                <img src="4.jpg" style="width:100%  ">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">5 / 6</div>
+                <img src="5.jpg" style="width:100% ">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">6 / 6</div>
+                <img src="6.jpg" style="width: 100%;">
+            </div>
+
+            <!-- <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a> -->
+
+
+
+            <div class="urow">
+                <div class="ucolumn">
+                    <img class="demo cursor" src="1.jpg" style="width:100% " onclick="currentSlide(1)" alt="The Woods">
+                </div>
+                <div class="ucolumn">
+                    <img class="demo cursor" src="2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+                </div>
+                <div class="ucolumn">
+                    <img class="demo cursor" src="3.jpg" style="width:100% " onclick="currentSlide(3)" alt="Mountains and fjords">
+                </div>
+                <div class="ucolumn">
+                    <img class="demo cursor" src="4.jpg" style="width:100% " onclick="currentSlide(4)" alt="Northern Lights">
+                </div>
+                <div class="ucolumn">
+                    <img class="demo cursor" src="5.jpg" style="width:100% " onclick="currentSlide(5)" alt="Nature and sunrise">
+                </div>
+                <div class="ucolumn">
+                    <img class="demo cursor" src="6.jpg" style="width:100% " onclick="currentSlide(6)" alt="Snowy Mountains">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="photos">
+
+        <h2> Image Gallery of Turbocharged</h2>
+
+
+        <!-- The four columns -->
+        <div class="row">
+            <div class="column">
+                <img src="1.jpg" alt="Nature" style="width:100%" onclick="myFunction(this);">
+            </div>
+            <div class="column">
+                <img src="2.jpg" alt="Snow" style="width:100%" onclick="myFunction(this);">
+            </div>
+            <div class="column">
+                <img src="3.jpg" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+            </div>
+            <div class="column">
+                <img src="4.jpg" alt="Lights" style="width:100%" onclick="myFunction(this);">
+            </div>
+            <div class="column1">
+                <img src="1.jpg" alt="Nature" style="width:100%" onclick="myFunction(this);">
+            </div>
+            <div class="column1">
+                <img src="2.jpg" alt="Snow" style="width:100%" onclick="myFunction(this);">
+            </div>
+            <div class="column1">
+                <img src="3.jpg" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+            </div>
+            <div class="column1">
+                <img src="4.jpg" alt="Lights" style="width:100%" onclick="myFunction(this);">
+            </div>
+            <div class="column2">
+                <img src="1.jpg" alt="Nature" style="width:100%" onclick="myFunction(this);">
+            </div>
+            <div class="column2">
+                <img src="2.jpg" alt="Snow" style="width:100%" onclick="myFunction(this);">
+            </div>
+            <div class="column2">
+                <img src="3.jpg" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+            </div>
+            <div class="column2">
+                <img src="4.jpg" alt="Lights" style="width:100%" onclick="myFunction(this);">
+            </div>
+        </div>
+
+        <div class="container">
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+            <img id="expandedImg" style="width:100%">
+            <div id="imgtext"></div>
+
+        </div>
+    </div>
+    <hr>
+    <div id="videos">
+        <h1> Videos of Turbocharged Marathi</h1>
+        <div class="vcontainer">
+
+            <div class="box box1">
+                <div class="boximg">
+                    <a href="https://youtu.be/GEgFzh9sziw" target="_blank" style="display: grid;
+                    background: none;">
+                        <img src="vbtn1.png" class="vbtn1" alt="play">
+                    </a>
+                </div>
+            </div>
+
+            <div class="box box2">
+                <div class="boximg">
+                    <a href="https://youtu.be/JLdfBi7qP5M" target="_blank" style="display: grid;
+                    background: none;">
+                        <img src="vbtn2.png" class="vbtn2" alt="play">
+                    </a>
+                </div>
+            </div>
+            <div class="box box3">
+                <div class="boximg">
+                    <a href="https://youtu.be/u2dFDmovaDQ" target="_blank" style="display: grid;
+                    background: none;">
+                        <img src="vbtn3.png" class="vbtn3" alt="play">
+                    </a>
+                </div>
+            </div>
+            <div class="box box4">
+                <div class="boximg">
+                    <a href="https://youtu.be/3LkmoOULTqg" target="_blank" style="display: grid;
+                    background: none;">
+                        <img src="vbtn4.png" class="vbtn4" alt="play">
+                    </a>
+                </div>
+            </div>
+            <div class="box box5">
+                <div class="boximg">
+                    <a href="https://youtu.be/TEhXtTfzeqU" target="_blank" style="display: grid;
+                    background: none;">
+                        <img src="vbtn5.png" class="vbtn5" alt="play">
+                    </a>
+                </div>
+            </div>
+            <div class="box box6">
+                <div class="boximg">
+                    <a href="https://youtu.be/2zwdSTfXRK4" target="_blank" style="display: grid;
+                    background: none;">
+                        <img src="vbtn6.png" class="vbtn6" alt="play">
+                    </a>
+                </div>
+            </div>
+            <div class="box box7">
+                <div class="boximg">
+                    <a href="https://youtu.be/NnhBP1nMBTw" target="_blank" style="display: grid;
+                    background: none;">
+                        <img src="vbtn7.png" class="vbtn7" alt="play">
+                    </a>
+                </div>
+            </div>
+            <div class="box box8">
+                <div class="boximg">
+                    <a href="https://youtu.be/lhtSeJc4JNQ" target="_blank" style="display: grid;
+                    background: none;">
+                        <img src="vbtn8.png" class="vbtn8" alt="play">
+                    </a>
+                </div>
+            </div>
+            <div class="box box9">
+                <div class="boximg">
+                    <a href="https://youtu.be/7MSXPZXElrg" target="_blank" style="display: grid;
+                    background: none;">
+                        <img src="vbtn9.png" class="vbtn9" alt="play">
+                    </a>
+                </div>
+            </div>
+            <div class="box box10">
+                <div class="boximg">
+                    <a href="https://youtu.be/SMwW4_hHbWw" target="_blank" style="display: grid;
+                    background: none;">
+                        <img src="vbtn10.png" class="vbtn10" alt="play">
+                    </a>
+                </div>
+            </div>
+            <div class="box box11">
+                <div class="boximg">
+                    <a href="https://youtu.be/UI-NCsEnxps" target="_blank" style="display: grid;
+                    background: none;">
+                        <img src="vbtn11.png" class="vbtn11" alt="play">
+                    </a>
+                </div>
+            </div>
+            <div class="box box12">
+                <div class="boximg">
+                    <a href="https://youtu.be/rRkB8WbIjtM" target="_blank" style="display: grid;
+                    background: none;">
+                        <img src="vbtn12.png" class="vbtn12" alt="play">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="about us">
+        <div class="Acontainer">
+            <h1>About Us</h1>
+            <div class="abox">
+                <img src="logo.jpg" alt="logo">
+                <div class="ainfo">
+                    <h1 class="aimgh1">CHANNAL NAME - TURBOCHARGED MARATHI</h1>
+                    <div class="aimgp">
+                        <p class="aimgp1"> Welcome to our channel Turbo charged मराठी this is the one stop destination for all latest Indian/world automobile updates 🙂. Basically i am Mechanical engineer with tech & electrical experties.we have strong Mechanical Family
+                            background for while,Here is list of what you can expect from us. </p>
+                    </div>
+                    <p class="aimgp2"> 1. Reviews of bikes & car's opinion </p>
+                    <p>2. Auto updates</p>
+                    <p>3. Bikers tools & equipment's reviews </p>
+                    <p> 4. Solution on Bike/ car Problems</p>
+                    <p>5. Traveling advices/ Blog's </p>
+                </div>
+            </div>
+
+            <div class="abox"></div>
+        </div>
+    </div>
+    <div id="contactus">
+        <h1>CONTACT US</h1>
+        <div class="ccontainer">
+            <form class="cform" action="" autocomplete="on">
+
+                <input type="text" id="name" name="name" placeholder="Your name..">
+
+
+                <input type="text" id="number" name="mobilenumber" placeholder="Your Mobile Number..">
+
+                <input type="text" id="gmail" name="gmail" placeholder="Your gmail..">
+
+                <select type="text" id="District" name="District">
+                  <option value="Satara">Satara</option>
+                  <option value="Pune">Pune</option>
+                  <option value="Mumbai">Mumbai</option>
+                  <option value="Sangali">Sangali</option>
+                  <option value="kolhapur">kolhapur</option>
+                  <option value="other">other</option>
+                </select>
+
+
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+    </div>
+
+</body>
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        var captionText = document.getElementById("caption");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        captionText.innerHTML = dots[slideIndex - 1].alt;
+    }
+
+    function myFunction(imgs) {
+        var expandImg = document.getElementById("expandedImg");
+        var imgText = document.getElementById("imgtext");
+        expandImg.src = imgs.src;
+        imgText.innerHTML = imgs.alt;
+        expandImg.parentElement.style.display = "block";
+    }
+</script>
+
+
+</html>
